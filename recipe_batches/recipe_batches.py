@@ -8,6 +8,14 @@ def recipe_batches(recipe, ingredients):
     total_made = []
     # loop over ingredients dict to pull out keys/values
     for k, v in ingredients.items():
+             print("key/value test test", k, v)
+        total_possible = ingredients[k] // recipe[k]
+        print("total test", total_possible)
+        total_made.append(total_possible)
+        result = min(total_made)
+
+    return result
+
 
 
 if __name__ == '__main__':
