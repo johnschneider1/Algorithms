@@ -8,21 +8,24 @@ def recipe_batches(recipe, ingredients):
     total_made = []
     # loop over ingredients dict to pull out keys/values
     for k, v in ingredients.items():
-             print("key/value test test", k, v)
+        print("key/value test test", k, v)
+        print(k)
+        print("ingredients: %s" % ingredients[k])
+        print("recipe: %s" % recipe[k])
         total_possible = ingredients[k] // recipe[k]
         print("total test", total_possible)
         total_made.append(total_possible)
         result = min(total_made)
+    print("test for brian", result)
 
     return result
 
 
-
 if __name__ == '__main__':
-        # Change the entries of these dictionaries to test
-        # your implementation with different inputs
+            # Change the entries of these dictionaries to test
+            # your implementation with different inputs
     recipe = {'milk': 100, 'butter': 50, 'flour': 5}
-    ingredients = {'milk': 132, 'butter': 48, 'flour': 51}
+    ingredients = {'milk': 432, 'butter': 988, 'flour': 251}
     print("{batches} batches can be made from the available ingredients: {ingredients}.".format(
         batches=recipe_batches(recipe, ingredients), ingredients=ingredients))
 
